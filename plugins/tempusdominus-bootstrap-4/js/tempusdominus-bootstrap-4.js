@@ -1741,7 +1741,7 @@ var TempusDominusBootstrap4 = function ($) {
                     tabindex: '-1',
                     'data-action': 'today',
                     'title': this._options.tooltips.today
-                }).append($('<span>').addClass(this._options.icons.today))));
+                }).append($('<span>' + this._options.icons.today + '</span>'))));
             }
             if (!this._options.sideBySide && this._hasDate() && this._hasTime()) {
                 var title = void 0,
@@ -1774,7 +1774,7 @@ var TempusDominusBootstrap4 = function ($) {
                     tabindex: '-1',
                     'data-action': 'close',
                     'title': this._options.tooltips.close
-                }).append($('<span>').addClass(this._options.icons.close))));
+                }).append($('<span>' + this._options.icons.close + '</span>'))));
             }
             return row.length === 0 ? '' : $('<table>').addClass('table-condensed').append($('<tbody>').append($('<tr>').append(row)));
         };
