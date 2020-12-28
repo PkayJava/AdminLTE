@@ -2192,7 +2192,7 @@ var TempusDominusBootstrap4 = function ($) {
           tabindex: '-1',
           'data-action': 'today',
           'title': this._options.tooltips.today
-        }).append($('<span>' + this._options.icons.today + '</span>'))));
+        }).append($('<span>Today</span>'))));
       }
 
       if (!this._options.sideBySide && this._options.collapse && this._hasDate() && this._hasTime()) {
@@ -2229,7 +2229,7 @@ var TempusDominusBootstrap4 = function ($) {
           tabindex: '-1',
           'data-action': 'close',
           'title': this._options.tooltips.close
-        }).append($('<span>' + this._options.icons.close + '</span>'))));
+        }).append($('<span>Close</span>'))));
       }
 
       return row.length === 0 ? '' : $('<table>').addClass('table-condensed').append($('<tbody>').append($('<tr>').append(row)));
