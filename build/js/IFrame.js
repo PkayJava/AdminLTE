@@ -133,7 +133,7 @@ class IFrame {
       return
     }
 
-    this.createTab(title, link, link.replace('.html', '').replace('./', '').replace(/["&'./=?[\]]/gi, '-').replaceAll('--', ''), autoOpen)
+    this.createTab(title, link, link.replace('.html', '').replace('./', '').replace(/["&'./=?[\]]/gi, '-').replace(/(--)/gi, ''), autoOpen)
   }
 
   switchTab(item) {
@@ -303,7 +303,7 @@ class IFrame {
       $(SELECTOR_CONTENT_WRAPPER).height(windowHeight)
       $(SELECTOR_CONTENT_IFRAME).height(windowHeight)
     } else {
-      const contentWrapperHeight = parseFloat($(SELECTOR_CONTENT_WRAPPER).css('min-height'))
+      const contentWrapperHeight = parseFloat($(SELECTOR_CONTENT_WRAPPER).css('height'))
       const navbarHeight = $(SELECTOR_TAB_NAV).outerHeight()
       if (tabEmpty == true) {
         setTimeout(() => {
