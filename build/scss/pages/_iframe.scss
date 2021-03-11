@@ -28,6 +28,19 @@ body.iframe-mode-fullscreen {
       right: .125rem;
       top: .125rem;
       z-index: 10;
+      visibility: hidden;
+
+      &:hover,
+      &:focus {
+        animation-name: fadeIn;
+        animation-duration: $transition-speed;
+        animation-fill-mode: both;
+        visibility: visible;
+      }
+
+      @include on-touch-device () {
+        visibility: visible;
+      }
     }
     .navbar-nav {
       overflow-y: auto;
@@ -38,6 +51,20 @@ body.iframe-mode-fullscreen {
       }
       .nav-item {
         position: relative;
+
+        &:hover,
+        &:focus {
+          .btn-iframe-close {
+            animation-name: fadeIn;
+            animation-duration: $transition-speed;
+            animation-fill-mode: both;
+            visibility: visible;
+
+            @include on-touch-device () {
+              visibility: visible;
+            }
+          }
+        }
       }
     }
     .tab-content {
